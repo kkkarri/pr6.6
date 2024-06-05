@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Відправлення адреси</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="container">
+  <h1>Поштова форма</h1>
+  <form id="initialForm">
+    <label for="name">Ім'я:</label>
+    <input type="text" id="name" name="name" required>
+
+    <label for="subject">Тема:</label>
+    <input type="text" id="subject" name="subject" required>
+
+    <label for="message">Повідомлення:</label>
+    <textarea id="message" name="message" rows="4" required></textarea>
+
+    <button type="button" onclick="showRecipientForm()">Далі</button>
+    <button type="reset">Очистити</button>
+  </form>
+
+  <form id="recipientForm" style="display: none;">
+    <label for="recipientEmail">Кому (e-mail):</label>
+    <input type="email" id="recipientEmail" name="recipientEmail" required>
+
+    <label for="finalSubject">Тема:</label>
+    <input type="text" id="finalSubject" name="finalSubject" required>
+
+    <button type="submit">Відправити</button>
+    <button type="button" onclick="resetForms()">Назад</button>
+  </form>
+
+  <div id="confirmation" style="display: none;">
+    Ваше повідомлення було відправлено!
+  </div>
+</div>
+
+<script src="main.js"></script>
+</body>
+</html>
